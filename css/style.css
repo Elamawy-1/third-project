@@ -1,0 +1,426 @@
+html{
+    scroll-behavior: smooth;
+    direction: rtl;
+}
+/* end variables */
+/* start global rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root{
+    --main-color:#556b2f ;
+    --header-sec-color: #fcfcc1;
+    --main-transition: 0.3s;
+    /* --main-color:#8b4513 ; */
+    
+}
+body{
+    font-family: "Cairo", sans-serif;
+    background-color: #F5F5DC;
+}
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+span{
+    font-family: "Cairo Play", sans-serif;
+    font-weight: bold;
+    color: var(--main-color);
+}
+.main-title{
+    border: 3px solid #7f8c8d;
+    width: fit-content;
+    margin: 0 auto 80px;
+    padding: 10px 20px;
+    color: #707b7c;
+    position: relative;
+    transition: var(--main-transition);
+    z-index: 1;
+    font-size: 25px;
+    font-weight: bold;
+}
+.main-title::before,
+.main-title::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    transition: var(--main-transition);
+}
+.main-title::before{
+    right: -25px;
+}
+.main-title::after{
+    left: -25px;
+}
+.main-title:hover::before{
+    z-index: -1;
+    animation: right-to-left 1s linear forwards;
+}
+.main-title:hover::after{
+    animation: left-to-right 1s linear forwards;
+    z-index: -1;
+}
+.main-title:hover{
+    color: white;
+    /* border: 3px solid var(--header-sec-color); */
+    transition-delay: 1s;
+}
+@keyframes right-to-left{
+    50%{
+        right: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100%{
+        right: 0;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+@keyframes left-to-right{
+    50%{
+        left: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100%{
+        left: 0;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+/* start header */
+.header{
+    background-color: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+    position: relative;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.header .logo h1{
+    margin: 0;
+    color: #d8d8d8;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: "Cairo Play", sans-serif;
+}
+@media (max-width: 767px) {
+    .header .logo{
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+.header .links .main-nav{
+    display: flex;
+    margin: 0;
+}
+.header .main-nav {
+    padding: 0;
+}
+.header .main-nav > li > a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 20px;
+    color: white;
+    transition: color 0.3s;
+    font-weight: 400;
+    overflow: hidden;
+    height: 74px;
+}
+.header .main-nav > li > a:hover{
+    color: var(--header-sec-color);
+    background-color: rgb(250, 250, 250 ,2%);
+}
+.header .main-nav > li > a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: 0;
+    left: -100%;
+    background-color: var(--header-sec-color);
+    transition: 0.3s;
+}
+.header .main-nav > li > a:hover::before{
+    left: 0;
+}
+
+.header .main-nav li:last-child a span{
+    position: absolute;
+    border-width: 6px;
+    border-style: solid;
+    border-color:white transparent transparent transparent ;
+    left: 10px;
+    top: 47%;
+}
+.header .main-nav li:last-child:hover a span{
+    border-color:var(--header-sec-color) transparent transparent transparent ;
+}
+@media (max-width: 767px) {
+    .header .main-nav > li > a{
+        padding: 20px;
+        font-size: 18px;
+        height: 60px;
+        margin: 10px 0 0;
+    }
+    .header .links{
+       margin: auto;
+    }
+    .header .main-nav li:last-child a span{
+        left: 5px;
+        top: 48%;
+    }
+}
+.header .links .mega-menu{
+    position: absolute;
+    min-width: 200px;
+    background-color: var(--main-color);
+    top: calc(100% + 5px);
+    left: 15px;
+    display: none;
+    z-index: 20;
+}
+.header .main-nav li:last-child:hover .mega-menu{
+    display: block;
+}
+.header .links .mega-menu ul{
+    padding: 0;
+}
+.header .links .mega-menu ul li a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(245, 245, 220 , 50%);
+    transition: 0.3s;
+    font-weight: 400;
+}
+.header .links .mega-menu ul li a:hover{
+    color: var(--header-sec-color);
+    font-weight: bold;
+    padding-right: 40px;
+    font-family: "Cairo Play", sans-serif;
+}
+
+@media (max-width: 767px) {
+    .header .links .mega-menu{
+        width: calc(100% - 10px);
+        left: 50%;
+        transform: translateX(-50%); 
+    }
+}
+/* end header */
+/* start landing */
+.landing{ 
+    position: relative;
+}
+.landing::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(../images/landing\ background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.07;
+}
+.landing .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 75px);  
+    padding-bottom: 150px;
+}
+
+.landing .image img{
+    max-width: 450px;
+}
+@media (max-width: 1199px) {
+    .landing .image img{
+        display: none;
+    }
+}
+
+.landing .text h2{
+    margin: 0;
+    font-size: 30px;
+    color: var(--main-color);
+}
+.landing .text h2 span{
+    font-size: 40px;
+}
+.landing .text p{
+    line-height: 1.8;
+    color: #6e6e6e;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.landing .text hr{
+    background-color: var(--main-color);
+    height: 3px;
+    border: 0;
+}
+.landing .text p:last-child{
+    font-family: "Cairo Play", sans-serif;
+}
+.landing .text p:last-child span:first-of-type{
+    display: block;
+}
+@media (max-width: 767px) {
+    .landing .text{
+        text-align: center;
+    }
+    .landing .text h2{
+        font-size: 25px;
+    }
+    .landing .text h2 span{
+        font-size: 35px;
+    }
+    .landing .text p{
+        font-size: 17px;
+    }
+}
+/* end landing */
+/* statr السيره */
+.elsera{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #ebebce;
+}
+.elsera .container{
+    display: flex;
+    align-items: flex-start;
+}
+.elsera .container .image{
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+}
+.elsera .container .image img{
+    width: 290px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.elsera .text{
+    max-width: 700px;
+    margin-right: 30px;
+}
+.elsera .text p{
+    line-height: 1.8;
+    font-size: 18px;
+    color: #6e6e6e;
+    font-weight: bold;
+}
+.elsera .text span:first-of-type{
+    display: block;
+    font-size: 23px;
+
+}
+@media (max-width: 767px) {
+    .elsera .container{
+        flex-direction: column;
+    }
+    .elsera .container .image img{
+        margin-bottom: 30px;
+        width: 290px;
+    }
+    .elsera .container .image{
+        margin: 0 auto;
+    }
+    .elsera .container .image img:last-child{
+        display: none;
+    }
+    .elsera .text{
+        text-align: center;
+        margin: 0;
+    }
+}
+/* end السيره */
+.elhrop{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.elhrop .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    gap: 30px;
+}
+.elhrop .container .card{
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    transition: var(--main-transition);
+}
+.elhrop .card .text{
+    padding: 10px;
+}
+.elhrop .card .text h2{
+    margin: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--main-color);
+    font-style: italic;
+}
+.elhrop .card .text p{
+    line-height: 1.7;
+    color:#6e6e6e;
+    font-weight: bold;
+}
+.elhrop .card:hover{
+    transform: translateY(-20px);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 35%);
+}
+@media (max-width: 559px) {
+    .elhrop .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+        gap: 30px;
+    }
+}
