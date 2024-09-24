@@ -342,6 +342,15 @@ span{
 .landing .text p:last-child span:first-of-type{
     display: block;
 }
+.landing audio{
+    display: block;
+    width: 100%;
+    margin: 50px auto 0;
+}
+.landing audio::-webkit-media-controls-panel {
+    background-color: #dcdcbd; /* لون الخلفية للوحة التحكم */
+}
+
 @media (max-width: 767px) {
     .landing .text{
         text-align: center;
