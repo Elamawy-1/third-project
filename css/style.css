@@ -11,6 +11,10 @@ html{
 }
 :root{
     --main-color:#556b2f ;
+    --section-color:#F5F5DC;
+    --sec-section-color:#ebebce;
+    --p-color:#6e6e6e;
+    --sec-p-color:#2b2b2b;
     --header-sec-color: #fcfcc1;
     --main-transition: 0.3s;
     /* --main-color:#8b4513 ; */
@@ -95,7 +99,6 @@ span{
 }
 .main-title:hover{
     color: white;
-    /* border: 3px solid var(--header-sec-color); */
     transition-delay: 1s;
 }
 @keyframes right-to-left{
@@ -124,6 +127,30 @@ span{
         height: 100%;
     }
 }
+.spikes {
+    position: relative;
+  }
+  
+  .spikes::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 100%;
+    z-index: 10;
+    display: block;
+    height: 25px;
+    background-size: 25px 100%;
+    background-image: linear-gradient(135deg, #F5F5DC 25%, transparent 25%), linear-gradient(225deg, #F5F5DC 25%, transparent 25%);
+    background-position: 0 0;
+  }
+.curved {
+    position: relative;
+    background: var(--section-color);
+    height: 10vh;
+    border-bottom-left-radius: 50% 80%;
+    border-bottom-right-radius: 50% 80%;
+  }
 /* start header */
 .header{
     background-color: var(--main-color);
@@ -299,7 +326,7 @@ span{
 }
 .landing .text p{
     line-height: 1.8;
-    color: #6e6e6e;
+    color: var(--p-color);
     font-size: 20px;
     font-weight: bold;
     
@@ -318,6 +345,7 @@ span{
 @media (max-width: 767px) {
     .landing .text{
         text-align: center;
+        margin-top: 50px;
     }
     .landing .text h2{
         font-size: 25px;
@@ -334,7 +362,7 @@ span{
 .elsera{
     padding-top: 60px;
     padding-bottom: 60px;
-    background-color: #ebebce;
+    background-color: var(--sec-section-color);
 }
 .elsera .container{
     display: flex;
@@ -357,7 +385,7 @@ span{
 .elsera .text p{
     line-height: 1.8;
     font-size: 18px;
-    color: #6e6e6e;
+    color: var(--p-color);
     font-weight: bold;
 }
 .elsera .text span:first-of-type{
@@ -410,7 +438,7 @@ span{
 }
 .elhrop .card .text p{
     line-height: 1.7;
-    color:#6e6e6e;
+    color:var(--p-color);
     font-weight: bold;
 }
 .elhrop .card:hover{
@@ -424,3 +452,189 @@ span{
         gap: 30px;
     }
 }
+/* end elhrop */
+.names{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--sec-section-color);
+}
+
+.names  .names-section,
+.names  .morals-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    gap: 30px;
+    justify-content: start;
+}
+.names  .morals-section{
+    max-width: 900px; 
+    margin: 0 auto;
+}
+.names .names-section .card,.moral{
+    background-color: #b2d8b2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 10px;
+    border-radius: 15px;
+    color: #1e3a5f;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    font-family: cairo play;
+}
+.names .names-section .card p, .moral p{
+    font-size: 15px;
+    color: #2b2b2b;
+}
+.names .content h2{
+    font-weight: bold;
+    font-family: cairo play;
+    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.names .content h2 i{
+    font-size: 18px;
+}
+.names .content .physical-section{
+    background-color: #fff8e0;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    font-weight: bold;
+    color: #2b2b2b;
+}
+.wifes{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.wifes .wifes-section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.wifes .wifes-section .card{
+    background-color: #e1d5ab;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+.wifes .wifes-section .wife1{
+    border-left: 5px solid #7D5B3A;
+}
+.wifes .wifes-section .wife2{
+    border-left: 5px solid #4B8B3B;
+}
+.wifes .wifes-section .wife3{
+    border-left: 5px solid #003B5C;
+}
+.wifes .wifes-section .wife4{
+    border-left: 5px solid #C55A25;
+}
+.wifes .wifes-section .card:hover{
+    transform: scale(1.05);
+}
+.wifes .wifes-section .card h3{
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0 0 10px;
+    font-family: cairo play;
+    color: var(--sec-p-color);
+}
+.wifes .wifes-section .card p{
+    font-size: 16px;
+    color: #4a4a4a;
+    font-weight: bold;
+}
+/* end wifes */
+.articles{
+    background-color: var(--sec-section-color);
+    position: relative;
+    z-index: 5;
+}
+.articles .container::before,
+.articles .container::after{
+    content: "";
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    width: 200px;
+    height: 200px;
+    opacity: 0.6;
+    background-size: cover;
+    background-image: url(../images/PATTERNS.png);
+    z-index: -1;
+}
+.container::after{
+    right: 50px;
+    top: 100px;
+}
+.articles .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.articles > .main-title{
+    margin-top: 60px;
+}
+.articles .content .hadith-card{
+    text-align: center;
+    background-color: #34495E; /* خلفية كارت أغمق قليلاً */
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    max-width: 700px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+}
+.articles .content .hadith-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.articles .content .hadith-card:last-child{
+    margin-bottom: 0;
+}
+.articles .hadith-card .hadith-text{
+    color: #ECF0F1;
+    margin-bottom: 10px;
+}
+.articles .hadith-card h2{
+    color: #ECF0F1;
+    font-size: 20px;
+    font-family: cairo play;
+    font-weight: bold;
+}
+.articles .hadith-source {
+    color: #BDC3C7;
+    font-style: italic;
+}
+
+.articles .image img{
+    width: 350px;
+    border-radius: 15px;
+    margin-right: 30px;
+}
+@media (max-width: 767px) {
+    .articles .container{
+        flex-direction: column;
+    }
+    .articles  .image img{
+        margin: 0 auto 30px;
+        order: 1;
+    }
+    .articles .content{
+        order: 2;
+    }
+}
+
+
+
+
+  
