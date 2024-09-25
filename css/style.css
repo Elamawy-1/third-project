@@ -550,9 +550,10 @@ audio::-webkit-media-controls-panel {
 }
 .wifes .wifes-section{
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(250px ,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(370px ,1fr));
     gap: 30px;
 }
+
 .wifes .wifes-section .card{
     background-color: #e1d5ab;
     padding: 20px;
