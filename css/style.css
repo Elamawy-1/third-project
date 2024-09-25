@@ -548,10 +548,32 @@ audio::-webkit-media-controls-panel {
     padding-top: 60px;
     padding-bottom: 60px;
 }
-.wifes .wifes-section{
+.wifes .wifes-section {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(370px ,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
     gap: 30px;
+}
+
+/* لضبط العرض على الشاشات المتوسطة */
+@media (max-width: 1024px) {
+    .wifes .wifes-section {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+/* لضبط العرض على الشاشات الصغيرة مثل الموبايلات */
+@media (max-width: 768px) {
+    .wifes .wifes-section {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+/* لضبط العرض على الشاشات الصغيرة جدًا */
+@media (max-width: 480px) {
+    .wifes .wifes-section {
+        grid-template-columns: 1fr; /* بطاقة واحدة في كل صف */
+        gap: 15px; /* تقليل الفجوة بين الكروت */
+    }
 }
 
 .wifes .wifes-section .card{
