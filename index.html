@@ -28,9 +28,9 @@
             <li><a href="#الرئيسيه">الرئيسيه</a></li>
             <li><a href="#السيرة">السيرة</a></li>
             <li><a href="#الغزوات">الغزوات</a></li>
-            <li><a href="">  المزيد<span></span></a>
+            <li><a href="" id="moreButton">  المزيد<span></span></a>
 
-              <div class="mega-menu">
+              <div class="mega-menu" id="megaMenu">
                 <ul>
                   <li><a href="#الاسماء"> اسماء النبي</a></li>
                   <li><a href="#الزوجات">زوجات النبي </a></li>
@@ -67,7 +67,7 @@
           لَقَدْ كَانَ لَكُمْ فِي <span>رَسُولِ اللَّهِ</span> أُسْوَةٌ حَسَنَةٌ لِّمَن كَانَ يَرْجُو اللَّهَ وَالْيَوْمَ الْآخِرَ وَذَكَرَ اللَّهَ كَثِيرًا.
           <span>(سورة الأحزاب: 21)</span>
         </p>
-        <audio controls autoplay   src="media/ان الله.mp3"></audio>
+        <audio controls src="media/ان الله.mp3"></audio>
       </div>
       <div class="image">
         <img src="images/helal.png" alt="">
@@ -595,7 +595,7 @@
   
       </div>
     </div>
-    <div class="dead">
+    <div class="dead" id="الوفاه">
     <h2 class="main-title">
       وفاة النبي
     </h2>
@@ -640,7 +640,7 @@
     
     </div>
    </div>
-   <div class="videos">
+   <div class="videos" id="الفيديوهات">
       <h2 class="main-title">
         السيرة النبوية - أحمد عامر
       </h2>
@@ -790,10 +790,6 @@
 
 
 
-   <script>
-    function changeVideo(videoId) {
-        document.getElementById('videoFrame').src = 'https://www.youtube.com/embed/' + videoId;
-    }
-    </script>
+<script src="javascript/main.js"></script>
 </body>
 </html>

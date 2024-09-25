@@ -255,9 +255,6 @@ audio::-webkit-media-controls-panel {
     display: none;
     z-index: 20;
 }
-.header .main-nav li:last-child:hover .mega-menu{
-    display: block;
-}
 .header .links .mega-menu ul{
     padding: 0;
 }
