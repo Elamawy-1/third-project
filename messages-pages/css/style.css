@@ -1,3 +1,11 @@
+.message-box{
+  padding-top: 80px;
+}
+@media (max-width: 767px) {
+  .message-box{
+    padding-top: 120px;
+  }
+}
 .message-detail {
     max-width: 800px;
     margin: 50px auto;
@@ -54,13 +62,19 @@
   }
   
   .message-navigation a {
-    color: #d4af37; /* اللون الذهبي */
+    background-color: #5c8a8a;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
     text-decoration: none;
-    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
   }
   
   .message-navigation a:hover {
-    text-decoration: underline;
+    background-color: #497373;
   }
   
   .back-button {
