@@ -1,0 +1,81 @@
+.message-detail {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f5e9; /* لون هادئ */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .message-header h1 {
+    font-size: 28px;
+    color: #4d4035;
+    margin-bottom: 10px;
+  }
+  
+  .message-summary {
+    font-size: 18px;
+    color: #666666;
+    line-height: 1.8;
+  }
+  
+  .message-content {
+    margin-top: 30px;
+  }
+  
+  .message-content h2 {
+    font-size: 24px;
+    color: #333333;
+  }
+  
+  .message-content p {
+    font-size: 16px;
+    color: #444444;
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+  
+  .message-story h2 {
+    font-size: 24px;
+    color: #333333;
+  }
+  
+  .message-story p {
+    font-size: 16px;
+    color: #444444;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .message-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .message-navigation a {
+    color: #d4af37; /* اللون الذهبي */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .message-navigation a:hover {
+    text-decoration: underline;
+  }
+  
+  .back-button {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .back-button a {
+    color: #4d4035;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .back-button a:hover {
+    text-decoration: underline;
+  }
+  
