@@ -180,7 +180,6 @@ audio::-webkit-media-controls-panel {
     z-index: 1000; /* يضمن بقاء الـ header فوق باقي المحتويات */
     background-color: var(--main-color);
     box-shadow: 0 0 10px var(--main-color);
-
 }
 .header .container{
     display: flex;
@@ -306,7 +305,7 @@ audio::-webkit-media-controls-panel {
 /* end header */
 /* start landing */
 .landing{ 
-    padding-top: 60px;
+    padding-top: 120px;
     position: relative;
 }
 .landing::before{
