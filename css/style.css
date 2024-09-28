@@ -425,6 +425,12 @@ audio::-webkit-media-controls-panel {
     font-size: 23px;
 
 }
+.elsera .text .all-name{
+    color: var(--sec-p-color);
+    font-weight: bold;
+    font-family: "Cairo Play", sans-serif;
+}
+
 @media (max-width: 767px) {
     .elsera .container{
         flex-direction: column;
